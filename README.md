@@ -1,4 +1,4 @@
 # Templates y rendering en Vue
-## Custom Box
-This project is deployed on Vercel. You can view it [here](https://custom-box.vercel.app/).
+## Citas Médicas
+This project is deployed on Vercel. You can view it [here](https://citas-medicas-chi.vercel.app/).
 
