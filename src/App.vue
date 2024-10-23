@@ -27,7 +27,8 @@
         <input type="text" v-model="reason" />
       </div>
     </div>
-    <button @click="send">Agregar</button>
+    <button @click="send" v-if="patient == '' || date == '' || hour == '' || severity == '' || reason == ''" disabled>Agregar</button>
+    <button @click="send" v-else>Agregar</button>
   </section>
   <section class="appointments-list">
     <div v-for="(appointment, i) in appointments" :key="appointment">
@@ -62,10 +63,6 @@ export default {
   },
   methods: {
     send() {
-      if (!this.patient || !this.date || !this.hour || !this.severity || !this.reason) {
-        alert("Todos los campos son obligatorios");
-        return;
-      }
       const appointment = {
         patient: this.patient,
         date: this.date,
